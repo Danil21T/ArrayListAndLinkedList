@@ -116,6 +116,8 @@ public class MyArrayList<T> {
     public boolean remove(Object o) {
         int index = 0;
         for (Object elem : mas) {
+            if(elem == null)
+                break;
             if (elem.equals(o)) {
                 remove(index);
                 return true;
